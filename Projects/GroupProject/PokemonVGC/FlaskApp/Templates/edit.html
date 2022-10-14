@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Edit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightgrey;">
+        <div class="btn-group me-2 btn-group-lg d-flex container" role="group" aria-label="First group">
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/home">Home</a>
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/top_cut">Top 16</a>
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/teams">Teams</a>
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/team_builder">Team Creator</a>
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/logout">Logout</a>
+        </div>
+    </nav>
+
+    <h1 class="text-center" style="margin-top: 15px;">
+        Edit Team
+    </h1>
+
+    <div style="margin-top: 15px;">
+        <hr class="hr" />
+        <img src="https://cdn-icons-png.flaticon.com/512/287/287221.png" class="mx-auto d-block" alt="icon"
+            style="height: 25px; width: 25px;">
+        <hr class="hr" />
+    </div>
+
+    <div>
+        <form action="" method="post" class="row justify-content-center">
+            <div>
+                <form action="" method="post" class="row justify-content-center">
+                    <div class="col-md-5" style="margin-left: 100px; margin-top: 15px;">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" value="" />
+                    </div>
+
+                    <div class="container">
+                        <div class="row justify-content-center" style="margin-top: 30px;">
+                            <div class="col-6 col-sm-3">
+                                <label for="pokemon_1">Team Member 1 (Legendary 1):</label>
+                                <select name="pokemon_1" id="pokemon_1" value="{{user.pokemon_1}}">
+                                    <option value="Zacian" id="888">Zacian</option>
+                                    <option value="Lunala" id="792">Lunala</option>
+                                    <option value="Calyrex - Shadow Rider" id="898">Calyrex - Shadow Rider</option>
+                                    <option value="Calyrex - Ice Rider" id="898">Calyrex - Ice Rider</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <label for="pokemon_2">Team Member 2 (Legendary 2):</label>
+                                <select name="pokemon_2" id="pokemon_2" value="{{user.pokemon_2}}">
+                                    <option value="Groudon" id="383">Groudon</option>
+                                    <option value="Kyogre" id="382">Kyogre</option>
+                                    <option value="Dialga" id="483">Diagla</option>
+                                    <option value="Palkia" id="484">Palkia</option>
+                                    <option value="Yveltal" id="717">Yveltal</option>
+                                </select>
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <div class="col-6 col-sm-3">
+                                <label for="pokemon_3">Team Member 3 (Intimidate Support):</label>
+                                <select name="pokemon_3" id="pokemon_3" value="{{user.pokemon_3}}">
+                                    <option value="Incineroar" id="727">Incineroar</option>
+                                    <option value="Landorus" id="645">Landorus</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <label for="pokemon_4">Team Member 4 (Defensive Disruptor):</label>
+                                <select name="pokemon_4" id="pokemon_4" value="{{user.pokemon_4}}">
+                                    <option value="Rillaboom" id="812">Rillaboom</option>
+                                    <option value="Amoonguss" id="591">Amoonguss</option>
+                                    <option value="Whimsicott" id="547">Whimsicott</option>
+                                    <option value="Shedinja" id="292">Shedinja</option>
+                                    <option value="Celesteela" id="797">Celesteela</option>
+                                </select>
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <div class="col-6 col-sm-3">
+                                <label for="pokemon_5">Team Member 5 (Tanky Support):</label>
+                                <select name="pokemon_5" id="pokemon_5" value="{{user.pokemon_5}}">
+                                    <option value="Grimmsnarl" id="861">Grimmsnarl</option>
+                                    <option value="Gastrodon" id="423">Gastrodon</option>
+                                    <option value="Porygon2" id="233">Porygon2</option>
+                                    <option value="Indeedee" id="876">Indeedee (Female)</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <label for="pokemon_6">Team Member 6 (Utility Powerhouse):</label>
+                                <select name="pokemon_6" id="pokemon_6" value="{{user.pokemon_6}}">
+                                    <option value="Charizard" id="6">Charizard</option>
+                                    <option value="Regieleki" id="894">Regieleki</option>
+                                    <option value="Thundurus" id="642">Thundurus</option>
+                                    <option value="Tornadus" id="641">Tornadus</option>
+                                    <option value="Galarian Moltres" id="146">Galarian Moltres</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="id" value="{{user.id}}">
+                    <div class="d-grid gap-2 col-6 mx-auto text-center" style="margin-top: 30px;">
+                        <input class="btn btn-danger" type="submit" value="Submit" style="background-color: #CC0000;" />
+                    </div>
+
+                </form>
+            </div>
+</body>
+
+</html>

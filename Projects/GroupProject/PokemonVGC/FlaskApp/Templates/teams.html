@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Most Used</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightgrey;">
+        <div class="btn-group me-2 btn-group-lg d-flex container" role="group" aria-label="First group">
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/home">Home</a>
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/top_cut">Top 16</a>
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/teams">Teams</a>
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/team_builder">Team Creator</a>
+            <a class="btn btn-outline-danger flex-fill" aria-current="page" href="/logout">Logout</a>
+        </div>
+    </nav>
+
+    <h1 class="text-center" style="margin-top: 15px;">
+        Teams
+    </h1>
+
+    <div style="margin-top: 15px;">
+        <hr class="hr" />
+        <img src="https://cdn-icons-png.flaticon.com/512/287/287221.png" class="mx-auto d-block" alt="icon"
+            style="height: 25px; width: 25px;">
+        <hr class="hr" />
+    </div>
+
+    <div class="col-8 mx-auto" style="margin-top: 30px;">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Team Member 1</th>
+                    <th>Team Member 2</th>
+                    <th>Team Member 3</th>
+                    <th>Team Member 4</th>
+                    <th>Team Member 5</th>
+                    <th>Team Member 6</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Here all the object will be iterated through and displayed below in the table data tags-->
+                {% for team in teams %}
+                <tr>
+                    <td>{{team.username}}</td>
+                    <td>{{team.pokemon_1}}</td>
+                    <td>{{team.pokemon_2}}</td>
+                    <td>{{team.pokemon_3}}</td>
+                    <td>{{team.pokemon_4}}</td>
+                    <td>{{team.pokemon_5}}</td>
+                    <td>{{team.pokemon_6}}</td>
+                    <td>
+                        <a href={{"/edit/" ~ team.id}}>Edit</a> |
+                        <a href={{"/delete/" ~ team.id}}>Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
