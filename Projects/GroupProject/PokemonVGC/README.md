@@ -1,5 +1,5 @@
 <br/>
-<h3 align="center">LitSApp</h3>
+<h3 align="center">Pokemon VGC</h3>
 
   <p align="center">
     The Idea of this project is to give people information about the recent 
@@ -26,8 +26,6 @@ allow them to plan ahead for the next Pokemon game: Scarlet and Violet
         <li><a href="#wireframe">Wireframe</a></li>
       </ul>
     </li>
-    <li>
-    </li>
   </ol>
 </details>
 
@@ -37,14 +35,12 @@ allow them to plan ahead for the next Pokemon game: Scarlet and Violet
 In it's current state the project is a CRUD app with login and registration. The app allows for the creation for teams which can be updated and deleted.
 For most of us working on the project, it was our first time collaborating as a team. It was an incredible learning experience!
 There are a few bugs or issues involving the database schemas and Top 16 page. More info on the bugs can be found out under <a href="#project-phase">Project Phase</a>.
-    <li>
       <ul>
         <li><a href="https://github.com/Watchitgo333">Eric Brusky</a> - Debugging to connect frontend and backend together, assisted with html templates.</li>
         <li><a href="https://github.com/DChaidir24">Dylan Chaidir</a> - Assisted with debugging and created the database with MySQL.</li>
         <li><a>Karien Lessing</a> - Created the majority of the html templates and did all of the css.</li>
         <li><a>Luis Flores</a> - Assisted with the database.</li>
       </ul>
-    </li>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -55,13 +51,11 @@ There are a few bugs or issues involving the database schemas and Top 16 page. M
 
 According to SDLC the project is currently under construction/development stage, a prototype is being built and functionally tested.
 The issues include:
-    <li>
       <ul>
         <li>The database schemas aren't quite right yet, they need to be manipulated into a one to many relationship as the team creator just creates new users with Pokemon associated with them, instead of a team.</li>
         <li>If you update the current logged in users team, you can delete your own username/team and stay logged in.</li>
         <li><a>The Top 16 page is a spitting image of the Teams page.</a></li>
       </ul>
-    </li>
 
 ### Built With
 Python
